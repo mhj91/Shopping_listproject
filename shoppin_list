@@ -1,0 +1,16 @@
+shopping_list = []
+
+shopping_active = True
+
+prompt = "Enter the item you would like to add to your shopping list. "
+prompt += "\ntype done when you're done: "
+
+while shopping_active == True:
+    item = input(prompt)
+    if item not in shopping_list:
+        shopping_list.append(item)
+    if item == "done":
+        shopping_list.remove("done")
+        shopping_active = False
+        print(shopping_list)
+
